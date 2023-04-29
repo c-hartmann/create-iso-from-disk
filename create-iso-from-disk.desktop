@@ -7,5 +7,6 @@ Actions=CreateISOfromDisk
 
 [Desktop Action CreateISOfromDisk]
 Name=Create ISO image from Disk
+Name[nl]=ISO-schijfkopie van schijf maken
 Icon=media-optical-dvd-symbolic
 Exec=IFS=:; for dir in $(kf5-config --path services); do command="$dir/create-iso-from-disk.sh"; if [ -x "$command" ]; then $command "%f"; break; fi; done
